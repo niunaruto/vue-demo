@@ -40,13 +40,13 @@ export default {
 <style scoped>
 .superView{
   width: 200px;
-  height: 200px;
+  height: 2010px;
   background-color: yellow;
   /* text-align: center; */
 }
 .divTag{
   background-color: rebeccapurple;
   width: 200px;
-  height: 100px;
+  height: 1020px;
 }
 </style>

@@ -4,6 +4,51 @@
       Loading...
     </div>
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
     <div v-if="error" class="error">
       {{ error }}
     </div>
@@ -40,10 +85,10 @@ export default {
             that.error = that.post = null
             that.loading = true
             setTimeout(function() {
-                debugger
+                
                 that.loading = false
                 that.post = {'title':'title','body':'body'}
-            },5000)
+            },1000)
         }
     }  
     

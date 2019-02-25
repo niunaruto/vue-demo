@@ -13,10 +13,10 @@ export default new Router({
       name: 'HelloWorld',
       component: HelloWorld
     },
-    {
-      path: '/pageone',
+    {//路由的懒加载
+      path: '/PageOne',
       name: 'PageOne',
-      component: PageOne
+      component: resolve => require(['@/components/PageOne.vue'], resolve)
     }
   ]
 })

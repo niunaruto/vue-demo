@@ -11,12 +11,29 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      meta:{needLogin:true}
+    },
+    {
+      path:'/Login',
+      name:'Login',
+      component: resolve => require(['@/components/Login.vue'], resolve)
+    },
+    {
+      path:'/Computed',
+      name:'computed',
+      component: resolve => require(['@/components/Computed.vue'], resolve)
+    },
+    {
+      path:'/base',
+      name:'baseV',
+      component: resolve => require(['@/components/Base.vue'], resolve)
     },
     {//路由的懒加载
       path: '/PageOne',
       name: 'PageOne',
-      component: resolve => require(['@/components/PageOne.vue'], resolve)
+      component: resolve => require(['@/components/PageOne.vue'], resolve),
+      meta:{needLogin:true}
     }
   ],
   scrollBehavior(to,from,savePosition){ // 在点击浏览器的“前进/后退”，或者切换导航的时候触发。
@@ -29,5 +46,6 @@ export default new Router({
     }else{
       return {x:0,y:0}
     }
-  }
+  },
+  
 })

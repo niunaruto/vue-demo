@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>综合练习</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<script src="./node_modules/amfe-flexible/index.js"></script>
+		<style type="text/css">
+	/* https://www.w3cplus.com/mobile/vw-layout-in-vue.html */
+		.color_div {
+			width: 100vm;
+			height: 100vm;
+			margin-bottom: 10vm;
+			transition: all 1s;
+		}
+
+		img {
+			width: 300vm;
+		}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+
+<body>
+	<div id='app'>
+		<div id="btn" class="color_div" @click='startMove' style="background-color:red"></div>
+		<div class="color_div" style="background-color:yellow"></div>
+		<div class="color_div" style="background-color:blue"></div>
+		<img id='pic1' src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562838641638&di=6defa76b374e1cafa52f943bfe9ba897&imgtype=0&src=http%3A%2F%2Faliyunzixunbucket.oss-cn-beijing.aliyuncs.com%2Fjpg%2F6d2ea2acbf896f86cd7322dd6e9a4f86.jpg%3Fx-oss-process%3Dimage%2Fresize%2Cp_100%2Fauto-orient%2C1%2Fquality%2Cq_90%2Fformat%2Cjpg%2Fwatermark%2Cimage_eXVuY2VzaGk%3D%2Ct_100"
+		 alt="">
+	</div>
+</body>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		jjjj: 'oooo',
+		data: {
+			isMove: false,
+		},
+		created() {
+			var browser = {
+				versions: function () {
+					var u = navigator.userAgent, app = navigator.appVersion;
+					return {         //移动终端浏览器版本信息
+						trident: u.indexOf('Trident') > -1, //IE内核
+						presto: u.indexOf('Presto') > -1, //opera内核
+						webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+						gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+						mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+						ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+						android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+						iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+						iPad: u.indexOf('iPad') > -1, //是否iPad
+						webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+					};
+				}(),
+				language: (navigator.browserLanguage || navigator.language).toLowerCase()
+			}
+			debugger
+		},
+		//列表
+		methods: {
+			startMove(e) {
+				e.toElement.style.height = "800vm"
+				e.toElement.style.width = "800vm"
+			},
+
+// flexible.js
+
+		}
+	})
+</script>
+
+</html>

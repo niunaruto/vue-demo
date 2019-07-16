@@ -1,6 +1,6 @@
-# vue
+# my-app
 
-> A Vue.js project
+> vue 学习demo
 
 ## Build Setup
 

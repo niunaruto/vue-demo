@@ -1,7 +1,7 @@
 {
-  "name": "vue",
+  "name": "my-app",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "vue 学习demo",
   "author": "niuNaruto <niuting604@163.com>",
   "private": true,
   "scripts": {
@@ -10,10 +10,18 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "eslint": "^6.0.1",
     "vue": "^2.5.2",
+    "vue-axios": "^2.1.4",
+    "vue-content-loading": "^1.6.0",
+    "vue-progressive-image": "^3.2.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

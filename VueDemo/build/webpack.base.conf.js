@@ -9,6 +9,8 @@ function resolve (dir) {
 }
 
 
+var DEV_HOST = JSON.stringify('http://192.168.32.12：8080')
+var PUB_HOST = JSON.stringify('http://{部署服务器ip和端口}')
 
 module.exports = {
   context: path.resolve(__dirname, '../'),

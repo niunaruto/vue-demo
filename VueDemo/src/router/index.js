@@ -1,51 +1,45 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import PageOne from '@/components/PageOne'
+import Home from '@/components/Home'
+import Mine from '@/components/Mine'
+import News from '@/components/News'
+import Discover from '@/components/Discover'
+import Detail from '@/components/Detail'
+import page404 from '@/components/Page404'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',  //把Router的mode修改为history模式,VueRouter默认的模式为HASH模式
+  mode: 'history', //把Router的mode修改为history模式,VueRouter默认的模式为HASH模式
+  linkActiveClass: 'active',
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld,
-      meta:{needLogin:true}
+      name: 'Home',
+      component: Home
     },
     {
-      path:'/Login',
-      name:'Login',
-      component: resolve => require(['@/components/Login.vue'], resolve)
+      path: '/Mine',
+      name: 'Mine',
+      component: Mine
     },
     {
-      path:'/Computed',
-      name:'computed',
-      component: resolve => require(['@/components/Computed.vue'], resolve)
+      path: '/News',
+      name: 'News',
+      component: News
     },
     {
-      path:'/base',
-      name:'baseV',
-      component: resolve => require(['@/components/Base.vue'], resolve)
+      path: '/Discover',
+      name: 'Discover',
+      component: Discover
     },
-    {//路由的懒加载
-      path: '/PageOne',
-      name: 'PageOne',
-      component: resolve => require(['@/components/PageOne.vue'], resolve),
-      meta:{needLogin:true}
-    }
-  ],
-  scrollBehavior(to,from,savePosition){ // 在点击浏览器的“前进/后退”，或者切换导航的时候触发。
-    console.log(to) // to：要进入的目标路由对象，到哪里去
-    console.log(from) // from：离开的路由对象，哪里来
-    console.log(savePosition) // savePosition：会记录滚动条的坐标，点击前进/后退的时候记录值{x:?,y:?}
-    
-    if(savePosition) {
-      return savePosition;
-    }else{
-      return {x:0,y:0}
-    }
-  },
-  
+    {
+      path: '/Detail',
+      name: 'Detail',
+      component: Detail
+    },
+
+    {path: '*',component: page404},   //当匹配不到合适的路由会跳转到 404 页面
+
+  ]
 })
